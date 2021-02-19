@@ -15,13 +15,34 @@ import EntryChoice from "./begin/EntryChoice";
 import EntryCode from "./begin/EntryCode";
 import EntryInfo from "./begin/EntryInfo";
 
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
+
 function App() {
+
+  const { t, i18n } = useTranslation();
+
+  function handleClick(lang) {
+    i18n.changeLanguage(lang)
+  }
+
   return (
     <div style={{
       backgroundColor: 'pink',}}>
       <Router>
+
+      
+
         <HeaderComponent />
         <div className="container">
+          <nav style={{ width: '15%', padding: '1rem 0', backgroundColor:'gray' }}>
+          <button onClick={()=>handleClick('en')} >
+            English
+          </button>
+          <button onClick={()=>handleClick('fr')} >
+            French
+          </button>
+          </nav>
           <Switch>
             <Route path="/oizo" exact component={Oizo}></Route>
             <Route path="/entryChoice" exact component={EntryChoice}></Route>

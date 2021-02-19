@@ -1,7 +1,16 @@
-import React, { Component } from "react";
+import React, { Component,
+  Suspense } from "react";
+import { withTranslation } from 'react-i18next';
+
+
+
 
 class Oizo extends Component {
   render() {
+
+    const { t } = this.props;
+
+
     return (
       <div style={{
         backgroundColor: 'white',}}>
@@ -32,6 +41,9 @@ class Oizo extends Component {
           <br />
           <br />
           <br />
+          <p>
+            <h3>{t('Thanks.1')}</h3>  <h3>{t('Why.1')}</h3> 
+          </p>
           <br />
           <br />
           <br />
@@ -39,7 +51,7 @@ class Oizo extends Component {
           <br />
           <button type="button" class="btn btn-light">
             {" "}
-            Entreprise{" "}
+            {t('Enterprise.1')}{" "}
           </button>
           <br />
           <br />
@@ -56,4 +68,15 @@ class Oizo extends Component {
   }
 }
 
-export default Oizo;
+const MyComponent = withTranslation()(Oizo)
+
+// i18n translations might still be loaded by the http backend
+// use react's Suspense
+export default function App() {
+  return (
+    <Suspense fallback="loading">
+      <MyComponent />
+    </Suspense>
+  );
+}
+;
