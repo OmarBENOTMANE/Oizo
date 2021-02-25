@@ -1,8 +1,26 @@
 {
-    "Enterprise": {
-        "1": "Enterprise"
-    },
-    "Why": {
-        "1": "For watching this video"
-    }
+  "Enterprise": {
+    "1": "Enterprise"
+  },
+  "Particular": {
+    "1": "Particular"
+  },
+  "Sign up": {
+    "1": "Sign up"
+  },
+  "Email": {
+    "1": "Email"
+  },
+  "Password": {
+    "1": "Password"
+  },
+  "Save": {
+    "1": "Save"
+  },
+  "Sign up with Facebook": {
+    "1": "Sign up with Facebook"
+  },
+  "Sign up with Google": {
+    "1": "Sign up with Google"
+  }
 }

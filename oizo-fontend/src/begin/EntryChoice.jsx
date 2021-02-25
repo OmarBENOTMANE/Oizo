@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
+import { withTranslation } from "react-i18next";
 
 class EntryChoice extends Component {
     render() {
+      const { t } = this.props;
         return (
             <div>
                 <br />
@@ -9,11 +11,11 @@ class EntryChoice extends Component {
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
               <br />
-              <h2>Sign up</h2>
+              <h2>{t("Sign up.1")}</h2>
               <div className="card-body">
                 <form>
                   <div className="form-group">
-                    <label> Email: </label>
+                    <label> {t("Email.1")}:</label>
                     <input
                       placeholder="Email"
                       name="mail"
@@ -21,7 +23,7 @@ class EntryChoice extends Component {
                     />
                   </div>
                   <div className="form-group">
-                    <label> Password: </label>
+                    <label>{t("Password.1")}: </label>
                     <input
                       placeholder="password"
                       name="password"
@@ -29,14 +31,15 @@ class EntryChoice extends Component {
                     />
                   </div>
                   <br/>
-                  <button className="button1">Save</button>
+                  <br/>
+                  <br/> 
+                  <button className="button1">{t("Save.1")}</button>
                   <br/>
                   <br/>
+                  <button className="btn btn-primary">{t("Sign up with Facebook.1")}</button>
                   <br/>
-                  <button className="btn btn-primary">Sign up with Facebook</button>
                   <br/>
-                  <br/>
-                  <button className="btn btn-danger">Sign up with Google</button>
+                  <button className="btn btn-danger">{t("Sign up with Google.1")}</button>
                 </form>
               </div>
             </div>
@@ -46,5 +49,14 @@ class EntryChoice extends Component {
         );
     }
 }
+const MyComponent = withTranslation()(EntryChoice);
 
-export default EntryChoice;
+// i18n translations might still be loaded by the http backend
+// use react's Suspense
+export default function App() {
+  return (
+    <Suspense fallback="loading">
+      <MyComponent />
+    </Suspense>
+  );
+}
