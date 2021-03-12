@@ -22,5 +22,71 @@
   },
   "Sign up with Google": {
     "1": "Sign up with Google"
+  },
+  "Enter your code received by sms": {
+    "1": "Enter your code received by sms"
+  },
+  "Next": {
+    "1": "Next"
+  },
+  "Register": {
+    "1": "Register"
+  },
+  "You": {
+    "1": "You"
+  },
+  "FirstName": {
+    "1": "First Name"
+  },
+  "LastName": {
+    "1": "Last Name"
+  },
+  "YourPhone": {
+    "1": "Your Phone"
+  },
+  "Phone": {
+    "1": "Phone"
+  },
+  "Your Address": {
+    "1": "Your Address"
+  },
+  "Number or Street name": {
+    "1": "Number or Street name"
+  },
+  "Postal code or city name": {
+    "1": "Postal code or city name"
+  },
+  "Country": {
+    "1": "Country"
+  },
+  "YourEmail": {
+    "1": " Email "
+  },
+  "Address": {
+    "1": " Address "
+  },
+  "City": {
+    "1": "City "
+  },
+  "YourAddress": {
+    "1": "Your Address "
+  },
+  "UsersList": {
+    "1": "Users List"
+  },
+  "Update": {
+    "1": "Update"
+  },
+  "Delete": {
+    "1": "Delete"
+  },
+  "View": {
+    "1": "View"
+  },
+  "UpdateUser": {
+    "1": "Update User"
+  },
+  "Cancel": {
+    "1": "Cancel"
   }
 }

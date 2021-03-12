@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import UserService from "../services/UserService";
+import { Trans } from "react-i18next";
 
 class UpdateUserComponent extends Component {
   constructor(props) {
@@ -90,7 +91,7 @@ class UpdateUserComponent extends Component {
         <div className="container">
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
-              <h3 className="text-center">Update User</h3>
+              <h3 className="text-center"><Trans>UpdateUser.1</Trans></h3>
               <div className="card-body">
                 <form>
                   <div className="form-group">
@@ -165,14 +166,14 @@ class UpdateUserComponent extends Component {
                   </div>
                 
                   <button className="btn btn-success" onClick={this.updateUser}>
-                    Save
+                   <trans>Save.1</trans>
                   </button>
                   <button
                     className="btn btn-danger"
                     onClick={this.cancel.bind(this)}
                     style={{ marginLeft: "10px" }}
                   >
-                    Cancel
+                    <trans>Cancel.1</trans>
                   </button>
                 </form>
               </div>

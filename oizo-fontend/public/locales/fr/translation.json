@@ -15,12 +15,81 @@
     "1": "Mot de passe"
   },
   "Save": {
-    "1": "Enregistrer"
+    "1": "Sauvegarder"
   },
   "Sign up with Facebook": {
     "1": "Se connecter avec facebook"
   },
   "Sign up with Google": {
     "1": "Se connecter avec Google"
+  },
+  "Enter your code received by sms": {
+    "1": "Entrez votre code reçu par sms"
+  },
+  "Next": {
+    "1": "Suivant"
+  },
+  "Register": {
+    "1": "S'inscrire"
+  },
+  "You": {
+    "1": "Toi"
+  },
+  "First Name": {
+    "1": "Prenom"
+  },
+  "Last Name": {
+    "1": "Nom"
+  },
+  "YourPhone": {
+    "1": "Votre Téléphone"
+  },
+  "Phone": {
+    "1": "Téléphone"
+  },
+  "Your Address": {
+    "1": "Votre Address"
+  },
+  "Number or Street name": {
+    "1": "Numéro ou nom de la rue"
+  },
+  "Postal code or city name": {
+    "1": "Code postal ou nom de la ville"
+  },
+  "FirstName": {
+    "1": "Prénom"
+  },
+  "LastName": {
+    "1": "Nom"
+  },
+  "Address": {
+    "1": "Address"
+  },
+  "City": {
+    "1": "Ville"
+  },
+  "Country": {
+    "1": "Pays"
+  },
+  "YourAddress": {
+    "1": "Votre Address "
+  },
+  "UsersList": {
+    "1": "Liste des utilisateurs"
+  },
+  "Update": {
+    "1": "Modifier"
+  },
+  "Delete": {
+    "1": "Suprimer"
+  },
+  "View": {
+    "1": "Voir"
+  },
+  "UpdateUser": {
+    "1": "Modification"
+  },
+  "Cancel": {
+    "1": "Anuler"
   }
 }

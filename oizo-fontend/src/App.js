@@ -18,7 +18,6 @@ import { useTranslation } from "react-i18next";
 
 function App() {
   const { i18n } = useTranslation();
-
   function handleClick(lang) {
     i18n.changeLanguage(lang);
   }
@@ -31,6 +30,18 @@ function App() {
     >
       <Router>
         <HeaderComponent />
+        <button
+          onClick={() => handleClick("en")}
+          className="butrans"
+        >
+          English
+        </button>
+        <button
+          onClick={() => handleClick("fr")}
+          className="butrans"
+        >
+          French
+        </button>
         <div className="container">
           <Switch>
             <Route path="/oizo" exact component={Oizo}></Route>
@@ -43,10 +54,7 @@ function App() {
             {/* <Route path = "/update-user/:id" component = {UpdateUserComponent}></Route> */}
           </Switch>
         </div>
-        <div style={{ width: "100%", backgroundColor: "rose" }}>
-          <button onClick={() => handleClick("en")}>English</button>
-          <button onClick={() => handleClick("fr")}>French</button>
-        </div>
+
         <FooterComponent />
       </Router>
     </div>

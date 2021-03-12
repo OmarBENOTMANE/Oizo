@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import UserService from "../services/UserService";
+import { Trans } from "react-i18next";
 
 class ListUserComponent extends Component {
   constructor(props) {
@@ -40,9 +41,8 @@ class ListUserComponent extends Component {
   render() {
     return (
       <div>
-        <h2 className="text-center">Users List</h2>
+        <h2 className="text-center"><Trans>UsersList.1</Trans></h2>
         <div className="row">
-          
           <br />
         </div>
         <div className="card">
@@ -51,14 +51,14 @@ class ListUserComponent extends Component {
               <table className="table ">
                 <thead className="thead-dark">
                   <tr>
-                    <th> User First Name</th>
-                    <th> User Last Name</th>
-                    <th> User Email Id</th>
-                    <th> phone</th>
-                    <th> address</th>
-                    <th> city</th>
-                    <th> country</th>
-                    <th> Actions <button className="btn btn-primary" onClick={this.addUser}>
+                    <th> <Trans>FirstName.1</Trans></th>
+                    <th><Trans>LastName.1</Trans> </th>
+                    <th> <Trans>Email.1</Trans></th>
+                    <th> <Trans>Phone.1</Trans></th>
+                    <th> <Trans>Address.1</Trans></th>
+                    <th> <Trans>City.1</Trans></th>
+                    <th> <Trans>Country.1</Trans></th>
+                    <th> Actions<button className="btn btn-primary" onClick={this.addUser}>
             {" "}
             +
           </button></th>
@@ -79,21 +79,20 @@ class ListUserComponent extends Component {
                           onClick={() => this.editUser(user.id)}
                           className="btn btn-info"
                         >
-                          Update{" "}
+                          <Trans>Update.1</Trans>
                         </button>
                         <button
                           style={{ marginLeft: "10px" }}
                           onClick={() => this.deleteUser(user.id)}
                           className="btn btn-danger"
-                        >
-                          Delete{" "}
+                        ><Trans>Delete.1</Trans>
+                          
                         </button>
                         <button
                           style={{ marginLeft: "10px" }}
                           onClick={() => this.viewUser(user.id)}
                           className="btn btn-info"
-                        >
-                          View{" "}
+                        ><Trans>View.1</Trans>
                         </button>
                       </td>
                     </tr>

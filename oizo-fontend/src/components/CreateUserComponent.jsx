@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import UserService from "../services/UserService";
+import { Trans } from "react-i18next";
 
 class CreateUserComponent extends Component {
   constructor(props) {
     super(props);
-
+    // step 2
     this.state = {
-      // step 2
       id: this.props.match.params.id,
       firstName: "",
       lastName: "",
@@ -20,7 +20,6 @@ class CreateUserComponent extends Component {
     this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
     this.saveOrUpdateUser = this.saveOrUpdateUser.bind(this);
   }
-
   // step 3
   componentDidMount() {
     if (this.state.id === "_add") {
@@ -50,11 +49,10 @@ class CreateUserComponent extends Component {
       phone: this.state.phone,
       address: this.state.address,
       city: this.state.city,
-      country:this.state.country,
+      country: this.state.country,
     };
     console.log("user => " + JSON.stringify(user));
 
-    
     if (this.state.id === "_add") {
       UserService.createUser(user).then((res) => {
         this.props.history.push("/users");
@@ -99,7 +97,7 @@ class CreateUserComponent extends Component {
     if (this.state.id === "_add") {
       return <h3 className="text-center">Add User</h3>;
     } else {
-      return <h3 className="text-center">Update User</h3>;
+      return <h3 className="text-center"><Trans>UpdateUser.1</Trans></h3>;
     }
   }
   render() {
@@ -112,10 +110,15 @@ class CreateUserComponent extends Component {
               {this.getTitle()}
               <div className="card-body">
                 <form>
-                  <h2>You</h2>
+                  <h2>
+                    <Trans>You.1</Trans>{" "}
+                  </h2>
                   <br />
                   <div className="form-group">
-                    <label> First Name: </label>
+                    <label>
+                      {" "}
+                      <Trans>FirstName.1</Trans> :{" "}
+                    </label>
                     <input
                       placeholder="First Name"
                       name="firstName"
@@ -125,7 +128,10 @@ class CreateUserComponent extends Component {
                     />
                   </div>
                   <div className="form-group">
-                    <label> Last Name: </label>
+                    <label>
+                      {" "}
+                      <Trans>LastName.1</Trans>:{" "}
+                    </label>
                     <input
                       placeholder="Last Name"
                       name="lastName"
@@ -134,10 +140,11 @@ class CreateUserComponent extends Component {
                       onChange={this.changeLastNameHandler}
                     />
                   </div>
-                  <h2>Your Phone</h2>
+                  <h2>
+                    <Trans>YourPhone.1</Trans>
+                  </h2>
                   <br />
                   <div className="form-group">
-              
                     <input
                       placeholder="Phone"
                       name="phone"
@@ -146,10 +153,11 @@ class CreateUserComponent extends Component {
                       onChange={this.changePhoneHandler}
                     />
                   </div>
-                  <br/>
-                  <h2>Your Address</h2>
+                  <br />
+                  <h2>
+                    <Trans>YourAddress.1</Trans>
+                  </h2>
                   <div className="form-group">
-                    
                     <input
                       placeholder="Number or Street name"
                       name="address"
@@ -176,9 +184,12 @@ class CreateUserComponent extends Component {
                       onChange={this.changeCountryHandler}
                     />
                   </div>
-                  <br />  
+                  <br />
                   <div className="form-group">
-                    <label> Email Id: </label>
+                    <label>
+                      {" "}
+                      <Trans>YourEmail.1</Trans>:{" "}
+                    </label>
                     <input
                       placeholder="Email Address"
                       name="emailId"
@@ -191,22 +202,23 @@ class CreateUserComponent extends Component {
                   <button
                     className="btn btn-success"
                     onClick={this.saveOrUpdateUser}
-                  >
-                    Save
+                  ><Trans>
+                    Save.1</Trans>
                   </button>
                   <button
                     className="btn btn-danger"
                     onClick={this.cancel.bind(this)}
                     style={{ marginLeft: "10px" }}
                   >
-                    Cancel
+                   <Trans>Cancel.1</Trans>
                   </button>
                 </form>
               </div>
             </div>
           </div>
         </div>
-        <br /><br />
+        <br />
+        <br />
       </div>
     );
   }

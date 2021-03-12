@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import UserService from "../services/UserService";
+import { Trans } from 'react-i18next';
 
 class ViewUserComponent extends Component {
   constructor(props) {
@@ -26,32 +27,32 @@ class ViewUserComponent extends Component {
           <h3 className="text-center"> View user Details</h3>
           <div className="card-body">
             <div className="row">
-              <label> User First Name: </label>
-              <div> {this.state.user.firstName}</div>
+              <label>  <Trans>FirstName.1</Trans>: </label>
+              <div>  -{this.sta.firstName}</div>
             </div>
             <div className="row">
-              <label> User Last Name: </label>
-              <div> {this.state.user.lastName} </div>
+              <label> <Trans>LastName.1</Trans>: </label>
+              <div> -{this.state.user.lastName} </div>
             </div>
             <div className="row">
-              <label> User Email ID: </label>
-              <div> {this.state.user.emailId}</div>
+              <label> <Trans>Email.1</Trans>: </label>
+              <div> -{this.state.user.emailId}</div>
             </div>
             <div className="row">
-              <label> User phone: </label>
-              <div> {this.state.user.phone}</div>
+              <label> <Trans>Phone.1</Trans>: </label>
+              <div> -{this.state.user.phone}</div>
               </div>
               <div className="row">
-              <label> User phone: </label>
-              <div> {this.state.user.address}</div>
+              <label><Trans>Address.1</Trans>: </label>
+              <div>- {this.state.user.address}</div>
               </div>
               <div className="row">
-              <label> User phone: </label>
-              <div> {this.state.user.city}</div>
+              <label> <Trans>City.1</Trans>: </label>
+              <div> -{this.state.user.city}</div>
               </div>
               <div className="row">
-              <label> User phone: </label>
-              <div> {this.state.user.country}</div>
+              <label> <Trans>Country.1</Trans>: </label>
+              <div> -{this.state.user.country}</div>
               </div>
           </div>
         </div>
