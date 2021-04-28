@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import UserService from "../services/UserService";
 import { Trans } from "react-i18next";
 
-class CreateUserComponent extends Component {
+class CreateUser extends Component {
   constructor(props) {
     super(props);
     // step 2
@@ -97,7 +97,11 @@ class CreateUserComponent extends Component {
     if (this.state.id === "_add") {
       return <h3 className="text-center">Add User</h3>;
     } else {
-      return <h3 className="text-center"><Trans>UpdateUser.1</Trans></h3>;
+      return (
+        <h3 className="text-center">
+          <Trans>UpdateUser.1</Trans>
+        </h3>
+      );
     }
   }
   render() {
@@ -202,15 +206,15 @@ class CreateUserComponent extends Component {
                   <button
                     className="btn btn-success"
                     onClick={this.saveOrUpdateUser}
-                  ><Trans>
-                    Save.1</Trans>
+                  >
+                    <Trans>Save.1</Trans>
                   </button>
                   <button
                     className="btn btn-danger"
                     onClick={this.cancel.bind(this)}
                     style={{ marginLeft: "10px" }}
                   >
-                   <Trans>Cancel.1</Trans>
+                    <Trans>Cancel.1</Trans>
                   </button>
                 </form>
               </div>
@@ -224,4 +228,4 @@ class CreateUserComponent extends Component {
   }
 }
 
-export default CreateUserComponent;
+export default CreateUser;

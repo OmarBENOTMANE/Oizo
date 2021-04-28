@@ -1,7 +1,8 @@
 import React, { Component, Suspense } from "react";
 import { withTranslation } from "react-i18next";
+import { HashLink as Link } from "react-router-hash-link";
 
-class Oizo extends Component {
+class NotFound extends Component {
   render() {
     const { t } = this.props;
     return (
@@ -14,21 +15,12 @@ class Oizo extends Component {
               <br />
               <br />
               <br />
-              <h3 className="text-center">icon</h3>
-              <br />
-              <br />
-              <br />
-              <h1 className="text-center">
-                <letter style={{ color: "blue" }}>
-                  o
-                  <letter style={{ color: "orange" }}>
-                    i
-                    <letter style={{ color: "green" }}>
-                      z<letter style={{ color: "red" }}>o</letter>
-                    </letter>
-                  </letter>
-                </letter>
-              </h1>
+              <div className="col-centered">
+                <h5>
+                  {t("Sorry we have not found a request for the moment.1")}.
+                </h5>
+                <h5> {t("It will come.1")}. ;)</h5>
+              </div>
               <br />
               <br />
               <br />
@@ -37,15 +29,11 @@ class Oizo extends Component {
               <br />
               <br />
               <br />
-              <button type="button" className="button1">
-                {t("Enterprise.1")}
-              </button>
               <br />
               <br />
-              <button type="button" className="button1">
-                {t("Particular.1")}
-              </button>
-              <br />
+              <Link className="button1" to="/newTrip">
+                {t("New route.1")}
+              </Link>
               <br />
               <br />
             </div>
@@ -56,8 +44,7 @@ class Oizo extends Component {
     );
   }
 }
-
-const MyComponent = withTranslation()(Oizo);
+const MyComponent = withTranslation()(NotFound);
 
 // i18n translations might still be loaded by the http backend
 // use react's Suspense

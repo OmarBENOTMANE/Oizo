@@ -41,7 +41,7 @@
   "Last Name": {
     "1": "Nom"
   },
-  "YourPhone": {
+  "Your Phone": {
     "1": "Votre Téléphone"
   },
   "Phone": {
@@ -71,9 +71,6 @@
   "Country": {
     "1": "Pays"
   },
-  "YourAddress": {
-    "1": "Votre Address "
-  },
   "UsersList": {
     "1": "Liste des utilisateurs"
   },
@@ -91,5 +88,96 @@
   },
   "Cancel": {
     "1": "Anuler"
+  },
+  "BecomeOizo": {
+    "1": "Devenir Oizo"
+  },
+  "FindOizo": {
+    "1": "Trouver un Oizo"
+  },
+  "Your Next Trip": {
+    "1": "Votre prochain voyage"
+  },
+  "Departure": {
+    "1": "Départ"
+  },
+  "Arrival": {
+    "1": "Arrivée"
+  },
+  "Date of departure": {
+    "1": "Date de départ"
+  },
+  "Departure time": {
+    "1": "Heure de départ"
+  },
+  "Arrival date": {
+    "1": "Date d'arrivée"
+  },
+  "Arriving time": {
+    "1": "Heure d'arrivée"
+  },
+  "Means of transport (optional)": {
+    "1": "Moyen de transport (facultatif)"
+  },
+  " and you can transport": {
+    "1": "et tu peux transporter"
+  },
+  "Lettre/Document": {
+    "1": "Lettre/Document"
+  },
+  "Medicine": {
+    "1": "Médicament"
+  },
+  "Parcel": {
+    "1": "Colis"
+  },
+  "Potential gain": {
+    "1": "Gain potentiel"
+  },
+  "Document": {
+    "1": "Document"
+  },
+  "Medicine box": {
+    "1": "boîte de médicament"
+  },
+  "You are responsible for shipping the package in good condition and validating its receipt with the recipient": {
+    "1": "Vous êtes responsable de l'expédition du colis en bon état et de la validation de sa réception auprès du destinataire"
+  },
+  "Complete": {
+    "1": "Terminer"
+  },
+  "Your trip has been created": {
+    "1": "Votre trajet a bien été créé"
+  },
+  "We are looking for requests that may correspond to your journey": {
+    "1": "Nous recherchons les demandes qui peuvent correspondre à votre trajet"
+  },
+  "My journeys": {
+    "1": "Mes trajets"
+  },
+  "Waiting for your reply": {
+    "1": "En attente de votre réponse"
+  },
+  "New journey": {
+    "1": "Nouveau trajet"
+  },
+  "Congratulations Abdou": {
+    "1": "félicitations Abdou"
+  },
+  "Your account has been created": {
+    "1": "Ton compte a bien été créé"
+  },
+  "Your best photo or not": {
+    "1": "Ta plus belle photo ou pas"
+  },
+  "Sorry we have not found a request for the moment": {
+    "1": "Désolé nous avons pas trouvé de demande pour le moment"
+  },
+  "It will come": {
+    "1": "Ça va venir"
+  },
+  "New route": {
+    "1": "Nouveau trajet"
   }
+
 }

@@ -12,7 +12,7 @@ class EntryInfo extends Component {
             <div className="card col-md-6 offset-md-3 offset-md-3">
               <div className="card-body">
                 <br />
-                <h2 className="center">{t("Register.1")}</h2>
+                <h2 className="button2">{t("Register.1")}</h2>
                 <form>
                   <br />
                   <h2>{t("You.1")}</h2>
@@ -71,6 +71,7 @@ class EntryInfo extends Component {
             </div>
           </div>
         </div>
+        <br />
       </div>
     );
   }

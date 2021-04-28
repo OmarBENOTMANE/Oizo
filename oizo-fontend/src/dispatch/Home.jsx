@@ -1,7 +1,8 @@
 import React, { Component, Suspense } from "react";
 import { withTranslation } from "react-i18next";
+import { HashLink as Link } from "react-router-hash-link";
 
-class Oizo extends Component {
+class Home extends Component {
   render() {
     const { t } = this.props;
     return (
@@ -14,11 +15,7 @@ class Oizo extends Component {
               <br />
               <br />
               <br />
-              <h3 className="text-center">icon</h3>
-              <br />
-              <br />
-              <br />
-              <h1 className="text-center">
+              <h1 className="col-centered">
                 <letter style={{ color: "blue" }}>
                   o
                   <letter style={{ color: "orange" }}>
@@ -37,14 +34,15 @@ class Oizo extends Component {
               <br />
               <br />
               <br />
-              <button type="button" className="button1">
-                {t("Enterprise.1")}
-              </button>
+              <br />
+              <Link to="/nextTrip" className="button1">
+                <h5>{t("BecomeOizo.1")}</h5>
+              </Link>
               <br />
               <br />
-              <button type="button" className="button1">
-                {t("Particular.1")}
-              </button>
+              <Link to="/home" className="button1">
+                <h5>{t("FindOizo.1")}</h5>
+              </Link>
               <br />
               <br />
               <br />
@@ -56,8 +54,7 @@ class Oizo extends Component {
     );
   }
 }
-
-const MyComponent = withTranslation()(Oizo);
+const MyComponent = withTranslation()(Home);
 
 // i18n translations might still be loaded by the http backend
 // use react's Suspense

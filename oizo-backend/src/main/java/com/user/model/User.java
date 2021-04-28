@@ -23,16 +23,16 @@ public class User {
 
 	@Column(name = "email_id")
 	private String emailId;
-	
+
 	@Column(name = "phone")
 	private int phone;
-	
+
 	@Column(name = "address")
 	private String address;
-	
+
 	@Column(name = "city")
 	private String city;
-	
+
 	@Column(name = "country")
 	private String country;
 
@@ -40,7 +40,8 @@ public class User {
 
 	}
 
-	public User(String firstName, String lastName, String emailId, int phone, String address, String city, String country) {
+	public User(String firstName, String lastName, String emailId, int phone, String address, String city,
+			String country) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -114,5 +115,5 @@ public class User {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	
+
 }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import UserService from "../services/UserService";
 import { Trans } from "react-i18next";
 
-class UpdateUserComponent extends Component {
+class UpdateUser extends Component {
   constructor(props) {
     super(props);
 
@@ -187,4 +187,4 @@ class UpdateUserComponent extends Component {
   }
 }
 
-export default UpdateUserComponent;
+export default UpdateUser;

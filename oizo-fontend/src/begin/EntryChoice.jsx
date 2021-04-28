@@ -1,12 +1,12 @@
-import React, { Component, Suspense } from 'react';
+import React, { Component, Suspense } from "react";
 import { withTranslation } from "react-i18next";
 
 class EntryChoice extends Component {
-    render() {
-      const { t } = this.props;
-        return (
-            <div>
-                <br />
+  render() {
+    const { t } = this.props;
+    return (
+      <div>
+        <br />
         <div className="container">
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
@@ -30,24 +30,28 @@ class EntryChoice extends Component {
                       className="form-control"
                     />
                   </div>
-                  <br/>
-                  <br/>
-                  <br/> 
+                  <br />
+                  <br />
+                  <br />
                   <button className="button1">{t("Save.1")}</button>
-                  <br/>
-                  <br/>
-                  <button className="btn btn-primary">{t("Sign up with Facebook.1")}</button>
-                  <br/>
-                  <br/>
-                  <button className="btn btn-danger">{t("Sign up with Google.1")}</button>
+                  <br />
+                  <br />
+                  <button className="btn btn-primary">
+                    {t("Sign up with Facebook.1")}
+                  </button>
+                  <br />
+                  <br />
+                  <button className="btn btn-danger">
+                    {t("Sign up with Google.1")}
+                  </button>
                 </form>
               </div>
             </div>
           </div>
         </div>
-            </div>
-        );
-    }
+      </div>
+    );
+  }
 }
 const MyComponent = withTranslation()(EntryChoice);
 

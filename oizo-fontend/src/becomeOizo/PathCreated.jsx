@@ -1,7 +1,7 @@
 import React, { Component, Suspense } from "react";
 import { withTranslation } from "react-i18next";
 
-class Oizo extends Component {
+class TrajetDone extends Component {
   render() {
     const { t } = this.props;
     return (
@@ -11,40 +11,40 @@ class Oizo extends Component {
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
               <br />
-              <br />
-              <br />
-              <br />
-              <h3 className="text-center">icon</h3>
-              <br />
-              <br />
-              <br />
-              <h1 className="text-center">
-                <letter style={{ color: "blue" }}>
-                  o
-                  <letter style={{ color: "orange" }}>
-                    i
-                    <letter style={{ color: "green" }}>
-                      z<letter style={{ color: "red" }}>o</letter>
-                    </letter>
-                  </letter>
-                </letter>
-              </h1>
+              <div className="col-centered">
+                <h2 style={{ color: "green" }}>
+                  {" "}
+                  {t("Your trip has been created.1")}
+                </h2>
+              </div>
               <br />
               <br />
               <br />
               <br />
               <br />
               <br />
+              <div className="col-centered">
+                <h5>
+                  {t(
+                    "We are looking for requests that may correspond to your journey.1"
+                  )}
+                  ...
+                </h5>
+              </div>
               <br />
               <br />
-              <button type="button" className="button1">
-                {t("Enterprise.1")}
-              </button>
+              <div className="col-centered">
+                <h3>
+                  <letter style={{ color: "blue" }}>o</letter>
+                  <letter style={{ color: "gray" }}>i</letter>
+                  <letter style={{ color: "gray" }}>z</letter>
+                  <letter style={{ color: "gray" }}>o</letter>
+                </h3>
+              </div>
               <br />
               <br />
-              <button type="button" className="button1">
-                {t("Particular.1")}
-              </button>
+              <br />
+              <br />
               <br />
               <br />
               <br />
@@ -56,8 +56,7 @@ class Oizo extends Component {
     );
   }
 }
-
-const MyComponent = withTranslation()(Oizo);
+const MyComponent = withTranslation()(TrajetDone);
 
 // i18n translations might still be loaded by the http backend
 // use react's Suspense

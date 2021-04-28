@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import UserService from "../services/UserService";
 import { Trans } from 'react-i18next';
 
-class ViewUserComponent extends Component {
+class ViewUser extends Component {
   constructor(props) {
     super(props);
 
@@ -28,7 +28,7 @@ class ViewUserComponent extends Component {
           <div className="card-body">
             <div className="row">
               <label>  <Trans>FirstName.1</Trans>: </label>
-              <div>  -{this.sta.firstName}</div>
+              <div>  -{this.state.user.firstName}</div>
             </div>
             <div className="row">
               <label> <Trans>LastName.1</Trans>: </label>
@@ -62,4 +62,4 @@ class ViewUserComponent extends Component {
   }
 }
 
-export default ViewUserComponent;
+export default ViewUser;

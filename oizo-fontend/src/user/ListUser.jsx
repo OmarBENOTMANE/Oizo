@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import UserService from "../services/UserService";
 import { Trans } from "react-i18next";
 
-class ListUserComponent extends Component {
+class ListUser extends Component {
   constructor(props) {
-    super(props);
-
+    super(props)
     this.state = {
-      users: [],
-    };
+      users: []
+    }
     this.addUser = this.addUser.bind(this);
     this.editUser = this.editUser.bind(this);
     this.deleteUser = this.deleteUser.bind(this);
@@ -41,27 +40,56 @@ class ListUserComponent extends Component {
   render() {
     return (
       <div>
-        <h2 className="text-center"><Trans>UsersList.1</Trans></h2>
+        <h2 className="text-center">
+          <Trans>UsersList.1</Trans>
+        </h2>
         <div className="row">
           <br />
         </div>
         <div className="card">
-          <div class="card-body">
+          <div className="card-body">
             <div className="row">
               <table className="table ">
                 <thead className="thead-dark">
                   <tr>
-                    <th> <Trans>FirstName.1</Trans></th>
-                    <th><Trans>LastName.1</Trans> </th>
-                    <th> <Trans>Email.1</Trans></th>
-                    <th> <Trans>Phone.1</Trans></th>
-                    <th> <Trans>Address.1</Trans></th>
-                    <th> <Trans>City.1</Trans></th>
-                    <th> <Trans>Country.1</Trans></th>
-                    <th> Actions<button className="btn btn-primary" onClick={this.addUser}>
-            {" "}
-            +
-          </button></th>
+                    <th>
+                      {" "}
+                      <Trans>FirstName.1</Trans>
+                    </th>
+                    <th>
+                      <Trans>LastName.1</Trans>{" "}
+                    </th>
+                    <th>
+                      {" "}
+                      <Trans>Email.1</Trans>
+                    </th>
+                    <th>
+                      {" "}
+                      <Trans>Phone.1</Trans>
+                    </th>
+                    <th>
+                      {" "}
+                      <Trans>Address.1</Trans>
+                    </th>
+                    <th>
+                      {" "}
+                      <Trans>City.1</Trans>
+                    </th>
+                    <th>
+                      {" "}
+                      <Trans>Country.1</Trans>
+                    </th>
+                    <th>
+                      {" "}
+                      Actions
+                      <button
+                        className="btn btn-primary"
+                        onClick={this.addUser}
+                      >
+                        {" "}
+                        +
+                      </button>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -85,14 +113,15 @@ class ListUserComponent extends Component {
                           style={{ marginLeft: "10px" }}
                           onClick={() => this.deleteUser(user.id)}
                           className="btn btn-danger"
-                        ><Trans>Delete.1</Trans>
-                          
+                        >
+                          <Trans>Delete.1</Trans>
                         </button>
                         <button
                           style={{ marginLeft: "10px" }}
                           onClick={() => this.viewUser(user.id)}
                           className="btn btn-info"
-                        ><Trans>View.1</Trans>
+                        >
+                          <Trans>View.1</Trans>
                         </button>
                       </td>
                     </tr>
@@ -109,4 +138,4 @@ class ListUserComponent extends Component {
   }
 }
 
-export default ListUserComponent;
+export default ListUser;

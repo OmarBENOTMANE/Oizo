@@ -41,14 +41,11 @@
   "LastName": {
     "1": "Last Name"
   },
-  "YourPhone": {
+  "Your Phone": {
     "1": "Your Phone"
   },
   "Phone": {
     "1": "Phone"
-  },
-  "Your Address": {
-    "1": "Your Address"
   },
   "Number or Street name": {
     "1": "Number or Street name"
@@ -59,7 +56,7 @@
   "Country": {
     "1": "Country"
   },
-  "YourEmail": {
+  "Your Email": {
     "1": " Email "
   },
   "Address": {
@@ -68,7 +65,7 @@
   "City": {
     "1": "City "
   },
-  "YourAddress": {
+  "Your Address": {
     "1": "Your Address "
   },
   "UsersList": {
@@ -88,5 +85,96 @@
   },
   "Cancel": {
     "1": "Cancel"
+  },
+  "BecomeOizo": {
+    "1": "Become Oizo"
+  },
+  "FindOizo": {
+    "1": "Find an Oizo"
+  },
+  "Your Next Trip": {
+    "1": "Your Next Trip"
+  },
+  "Departure": {
+    "1": "Departure"
+  },
+  "Arrival": {
+    "1": "Arrival"
+  },
+  "Date of departure": {
+    "1": "Date of departure"
+  },
+  "Departure time": {
+    "1": "Departure time"
+  },
+  "Arrival date": {
+    "1": "Arrival date"
+  },
+  "Arriving time": {
+    "1": "Arriving time"
+  },
+  "Means of transport (optional)": {
+    "1": "Means of transport (optional)"
+  },
+  " and you can transport": {
+    "1": " and you can transport"
+  },
+  "Lettre/Document": {
+    "1": "Lettre/Document"
+  },
+  "Medicine": {
+    "1": "Medicine"
+  },
+  "Parcel": {
+    "1": "Parcel"
+  },
+  "Potential gain": {
+    "1": "Potential gain"
+  },
+  "Document": {
+    "1": "Document"
+  },
+  "Medicine box": {
+    "1": "Medicine box"
+  },
+  "You are responsible for shipping the package in good condition and validating its receipt with the recipient": {
+    "1": "You are responsible for shipping the package in good condition and validating its receipt with the recipient"
+  },
+  "Complete": {
+    "1": "Complete"
+  },
+  "Your trip has been created": {
+    "1": "Your trip has been created"
+  },
+  "We are looking for requests that may correspond to your journey": {
+    "1": "We are looking for requests that may correspond to your journey"
+  },
+  "My journeys": {
+    "1": "My journeys"
+  },
+  "Waiting for your reply": {
+    "1": "Waiting for your reply"
+  },
+  "New journey": {
+    "1": "New journey"
+  },
+  "Congratulations Abdou": {
+    "1": "Congratulations Abdou"
+  },
+  "Your account has been created": {
+    "1": "Your account has been created"
+  },
+  "Your best photo or not": {
+    "1": "Your best photo or not"
+  },
+  "Sorry we have not found a request for the moment. It will come": {
+    "1": "Sorry we have not found a request for the moment. It will come"
+  },
+  "It will come": {
+    "1": "It will com"
+  },
+  "New route": {
+    "1": "New route"
   }
+
 }

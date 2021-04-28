@@ -1,80 +1,51 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .footer {
   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   text-align: center;
-}
-.navbar.navbar-font {
-  background-color: white;
-}
-.clrbrand {
-  color: rgb(228, 157, 169);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 .button1 {
   background-color: pink;
   border: medium;
+  border-radius: 1em;
   color: white;
   padding: 10px 40px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   margin: auto;
   cursor: pointer;
 }
-.center {
+.button2 {
   margin: auto;
-  width: 40%;
+  width: 45%;
   padding: 10px;
   background-color: pink;
   text-align: center;
 }
-
 .butrans {
   float: right;
   margin-left: 5px;
   white-space: nowrap;
   background-color: pink;
   color: rgba(0, 0, 0, 0.603);
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: none;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+.space {
+  white-space: pre-wrap;
+}
+.text-right {
+  float: right;
+}
+.posi30 {
+  margin: 30px;
+}
+.cadre-rose {
+  background-color: rgba(255, 192, 203, 0.705);
 }
