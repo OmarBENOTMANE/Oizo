@@ -29,23 +29,34 @@
   margin-left: 5px;
   white-space: nowrap;
   background-color: pink;
-  color: rgba(0, 0, 0, 0.603);
+  color: rgb(0, 0, 0);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+}
+.pannel {
+  float: left;
+  margin-left: 10px;
+  white-space: nowrap;
+  background-color: pink;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border: none;
 }
 .col-centered {
   float: none;
   margin: 0 auto;
 }
-.space {
-  white-space: pre-wrap;
-}
+
 .text-right {
   float: right;
 }
 .posi30 {
-  margin: 30px;
+  margin: 40px;
 }
 .cadre-rose {
   background-color: rgba(255, 192, 203, 0.705);
+}
+.millieu {
+  display: flex;
+  justify-content: center;
 }

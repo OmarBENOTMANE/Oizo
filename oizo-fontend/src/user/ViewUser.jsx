@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import UserService from "../services/UserService";
-import { Trans } from 'react-i18next';
+import { Trans } from "react-i18next";
 
 class ViewUser extends Component {
   constructor(props) {
@@ -20,43 +20,61 @@ class ViewUser extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <br />
-        <div className="card col-md-6 offset-md-3">
-        <br />
-          <h3 className="text-center"> View user Details</h3>
+        <div className="card col-md-6 offset-md-3"
+              style={{backgroundColor: "pink",}}>
+          <br />
+          <h3 className="text-center">
+            <Trans>User Details.1</Trans>
+          </h3>
           <div className="card-body">
-            <div className="row">
-              <label>  <Trans>FirstName.1</Trans>: </label>
-              <div>  -{this.state.user.firstName}</div>
+            <div>
+              <label>
+                <Trans>First Name.1</Trans>:
+              </label>{" "}
+              {this.state.user.firstName}
             </div>
-            <div className="row">
-              <label> <Trans>LastName.1</Trans>: </label>
-              <div> -{this.state.user.lastName} </div>
+            <div>
+              <label>
+                <Trans>Last Name.1</Trans>:
+              </label>{" "}
+              {this.state.user.lastName}
             </div>
-            <div className="row">
-              <label> <Trans>Email.1</Trans>: </label>
-              <div> -{this.state.user.emailId}</div>
+            <div>
+              <label>
+                <Trans>Email.1</Trans>:
+              </label>{" "}
+              {this.state.user.email}
             </div>
-            <div className="row">
-              <label> <Trans>Phone.1</Trans>: </label>
-              <div> -{this.state.user.phone}</div>
-              </div>
-              <div className="row">
-              <label><Trans>Address.1</Trans>: </label>
-              <div>- {this.state.user.address}</div>
-              </div>
-              <div className="row">
-              <label> <Trans>City.1</Trans>: </label>
-              <div> -{this.state.user.city}</div>
-              </div>
-              <div className="row">
-              <label> <Trans>Country.1</Trans>: </label>
-              <div> -{this.state.user.country}</div>
-              </div>
+            <div>
+              <label>
+                <Trans>Phone.1</Trans>:
+              </label>{" "}
+              {this.state.user.phone}
+            </div>
+            <div>
+              <label>
+                <Trans>Address.1</Trans>:
+              </label>{" "}
+              {this.state.user.address}
+            </div>
+            <div>
+              <label>
+                <Trans>City.1</Trans>:
+              </label>{" "}
+              {this.state.user.city}
+            </div>
+            <div>
+              <label>
+                <Trans>Country.1</Trans>:
+              </label>{" "}
+              {this.state.user.country}
+            </div>
           </div>
         </div>
-        <br /><br />
+        <br />
+        <br />
       </div>
     );
   }

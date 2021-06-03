@@ -5,7 +5,6 @@ import { Trans } from "react-i18next";
 class ListTrip extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       trips: [],
     };
@@ -41,99 +40,85 @@ class ListTrip extends Component {
   render() {
     return (
       <div>
+        <br />
         <h2 className="text-center">
-          <Trans>TripsList.1</Trans>
+          <Trans>List of trips.1</Trans>
         </h2>
-        <div className="row">
-          <br />
-        </div>
-        <div className="card">
+        <br />
+        <div
+          className="card"
+          style={{ backgroundColor: "pink",}}>
           <div className="card-body">
-            <div className="row">
-              <table className="table ">
-                <thead className="thead-dark">
-                  <tr>
-                    <th>
-                      {" "}
-                      <Trans>departure.1</Trans>
-                    </th>
-                    <th>
-                      <Trans>arrival.1</Trans>{" "}
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>departureDate.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>departureTime.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>arrivalDate.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>arrivingTime.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>meansTransport.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      Actions
+            <table className="table table-dark">
+              <thead>
+                <tr>
+                  <th>
+                    <Trans>Departure.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Arrival.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Date of departure.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Departure time.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Arrival date.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Arriving time.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Means of transport.1</Trans>
+                  </th>
+                  <th>Actions</th>
+                  <th>
+                    <button
+                      className="btn btn-primary btn-sm"
+                      onClick={this.addTrip}
+                    > +
+                    </button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.trips.map((trip) => (
+                  <tr key={trip.id}>
+                    <td> {trip.departure} </td>
+                    <td> {trip.arrival}</td>
+                    <td> {trip.departureDate}</td>
+                    <td> {trip.departureTime}</td>
+                    <td> {trip.arrivalDate}</td>
+                    <td> {trip.arrivingTime}</td>
+                    <td> {trip.meansTransport}</td>
+                    <td>
                       <button
-                        className="btn btn-primary"
-                        onClick={this.addTrip}
+                        onClick={() => this.editTrip(trip.id)}
+                        className="btn btn-outline-warning btn-sm"
                       >
-                        {" "}
-                        +
+                        <Trans>Update.1</Trans>
                       </button>
-                    </th>
+                      <button
+                        onClick={() => this.deleteTrip(trip.id)}
+                        className="btn btn-outline-danger btn-sm"
+                      >
+                        <Trans>Delete.1</Trans>
+                      </button>
+                      <button
+                        onClick={() => this.viewTrip(trip.id)}
+                        className="btn btn-outline-info btn-sm"
+                      >
+                        <Trans>View.1</Trans>
+                      </button>
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
-                  {this.state.trips.map((trip) => (
-                    <tr key={trip.id}>
-                      <td> {trip.departure} </td>
-                      <td> {trip.arrival}</td>
-                      <td> {trip.departureDate}</td>
-                      <td> {trip.departureTime}</td>
-                      <td> {trip.arrivalDate}</td>
-                      <td> {trip.arrivingTime}</td>
-                      <td> {trip.meansTransport}</td>
-                      <td>
-                        <button
-                          onClick={() => this.editTrip(trip.id)}
-                          className="btn btn-info"
-                        >
-                          <Trans>Update.1</Trans>
-                        </button>
-                        <button
-                          style={{ marginLeft: "10px" }}
-                          onClick={() => this.deleteTrip(trip.id)}
-                          className="btn btn-danger"
-                        >
-                          <Trans>Delete.1</Trans>
-                        </button>
-                        <button
-                          style={{ marginLeft: "10px" }}
-                          onClick={() => this.viewTrip(trip.id)}
-                          className="btn btn-info"
-                        >
-                          <Trans>View.1</Trans>
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
-        <br />
-        <br />
       </div>
     );
   }

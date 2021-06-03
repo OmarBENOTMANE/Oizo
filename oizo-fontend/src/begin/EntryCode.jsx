@@ -8,30 +8,32 @@ class EntryCode extends Component {
       <div>
         <br />
         <div className="container">
-          <div className="row">
-            <div className="card col-md-6 offset-md-3 offset-md-3">
-              <br />
-              <div className="card-body">
-                <form>
-                  <div className="form-group">
-                    <label> {t("Enter your code received by sms.1")} </label>
-                    <br />
-                    <br />
-                    <input
-                      placeholder="Code"
-                      name="codesms"
-                      className="form-control"
-                    />
-                  </div>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <button className="button1">{t("Next.1")}</button>
-                  <br />
-                  <br />
-                </form>
+          <div
+            className="card col-md-6 offset-md-3"
+            style={{ backgroundColor: "pink" }}
+          >
+            <br />
+            <div className="card-body">
+              <div>
+                <label className="millieu">
+                  {" "}
+                  {t("Enter your code received by sms.1")}{" "}
+                </label>
+                <br />
+                <br />
+                <input
+                  placeholder="Code"
+                  name="codesms"
+                  className="form-control"
+                />
               </div>
+              <br />
+              <br />
+              <br />
+              <br />
+              <button className="button1 pannel">{t("Next.1")}</button>
+              <br />
+              <br />
             </div>
           </div>
         </div>

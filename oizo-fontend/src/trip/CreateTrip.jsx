@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import TripService from "../services/TripService";
 import { Trans } from "react-i18next";
 import { HashLink as Link } from "react-router-hash-link";
-//import { withTranslation } from "react-i18next";
-      
+
 class CreateTrip extends Component {
   constructor(props) {
     super(props);
@@ -74,15 +73,12 @@ class CreateTrip extends Component {
   changeDepartureHandler = (event) => {
     this.setState({ departure: event.target.value });
   };
-
   changeLastNameHandler = (event) => {
     this.setState({ lastName: event.target.value });
   };
-
   changeArrivalHandler = (event) => {
     this.setState({ arrival: event.target.value });
   };
-
   changeDepartureDateHandler = (event) => {
     this.setState({ departureDate: event.target.value });
   };
@@ -98,7 +94,7 @@ class CreateTrip extends Component {
   changeMeansTransportHandler = (event) => {
     this.setState({ meansTransport: event.target.value });
   };
-  
+
   cancel() {
     this.props.history.push("/trips");
   }
@@ -116,116 +112,111 @@ class CreateTrip extends Component {
   }
   render() {
     return (
-      <div>
-        <br></br>
-        <div className="container">
-          <div className="row">
-            <div className="card col-md-6 offset-md-3 offset-md-3">
-              <br />
-              {this.getTitle()}
-              <h1>
-                <Trans>Your Next Trip.1</Trans>
-              </h1>
-              <br />
-              <h5>
-                <Trans>Departure.1</Trans>
-              </h5>
-              <br />
-              <div className="form-group">
-                <input
-                  placeholder="Departure.1"
-                  name="departure"
-                  className="form-control"
-                  value={this.state.departure}
-                  onChange={this.changeDepartureHandler}
-                />
-              </div>
-              <br />
-              <h5>"Arrival.1"</h5>
-              <div className="form-group">
-                <input
-                  placeholder="Arrival.1"
-                  name="arrival"
-                  className="form-control"
-                  value={this.state.arrival}
-                  onChange={this.changeArrivalHandler}
-                />
-              </div>
-              <br />
-              <h5>"Date of departure.1"</h5>
-              <div className="form-group">
-                <input
-                  placeholder="Date of departure.1"
-                  name="departureDate"
-                  className="form-control"
-                  value={this.state.departureDate}
-                  onChange={this.changeDepartureDateHandler}
-                />
-              </div>
-              <br />
-              <h5>"Departure time.1"</h5>
-              <div className="form-group">
-                <input
-                  placeholder="Departure time.1"
-                  name="departureTime"
-                  className="form-control"
-                  value={this.state.departureTime}
-                  onChange={this.changeDepartureTimeHandler}
-                />
-              </div>
-              <br />
-              <h5>"Arrival date.1"</h5>
-              <div className="form-group">
-                <input
-                  placeholder="Arrival date.1"
-                  name="arrivalDate"
-                  className="form-control"
-                  value={this.state.arrivalDate}
-                  onChange={this.changeArrivalDateHandler}
-                />
-              </div>
-              <br />
-              <h5>"Arriving time.1"</h5>
-              <div className="form-group">
-                <input
-                  placeholder="Arriving time.1"
-                  name="arrivingTime"
-                  className="form-control"
-                  value={this.state.arrivingTime}
-                  onChange={this.changeArrivingTimeHandler}
-                />
-              </div>
-              <br />
-              <h5>"Means of transport (optional).1"</h5>
-              <div className="form-group">
-                <input
-                  placeholder="Means of transport (optional).1"
-                  name="meansTransport"
-                  className="form-control"
-                  value={this.state.meansTransport}
-                  onChange={this.changeMeansTransportHandler}
-                />
-              </div>
-              <br />
-              <Link
-                to="/deliver"
-                className="button1"
-                onClick={this.saveOrUpdateTrip}
-              >
-                "Next.1"
-              </Link>
-              <br />
-              <button
-                className="btn btn-danger"
-                onClick={this.cancel.bind(this)}
-                style={{ marginLeft: "10px" }}
-              >
-                <Trans>Cancel.1</Trans>
-              </button>
-            </div>
+      <div className="container">
+        <br />
+        <div className="card col-md-6 offset-md-3"
+        style={{ backgroundColor: "pink",}}>
+          <br />
+          {/* {this.getTitle()} */}
+          <h1>
+            <Trans>Your Next Trip.1</Trans>
+          </h1>
+          <br />
+          <h5> <Trans>Departure.1</Trans></h5>
+          <div className="form-group">
+            <input
+              placeholder="Departure"
+              name="departure"
+              className="form-control"
+              value={this.state.departure}
+              onChange={this.changeDepartureHandler}
+            />
           </div>
+          <br />
+          <h5><Trans>Arrival.1</Trans> </h5>
+          <div className="form-group">
+            <input
+              placeholder="Arrival"
+              name="arrival"
+              className="form-control"
+              value={this.state.arrival}
+              onChange={this.changeArrivalHandler}
+            />
+          </div>
+          <br />
+          <h5><Trans>Date of departure.1</Trans></h5>
+          <div className="form-group">
+            <input
+              placeholder="Date of departure"
+              name="departureDate"
+              className="form-control"
+              value={this.state.departureDate}
+              onChange={this.changeDepartureDateHandler}
+            />
+          </div>
+          <br />
+          <h5><Trans>Departure time.1</Trans></h5>
+          <div className="form-group">
+            <input
+              placeholder="Departure time"
+              name="departureTime"
+              className="form-control"
+              value={this.state.departureTime}
+              onChange={this.changeDepartureTimeHandler}
+            />
+          </div>
+          <br />
+          <h5><Trans>Arrival date.1</Trans></h5>
+          <div className="form-group">
+            <input
+              placeholder="Arrival date"
+              name="arrivalDate"
+              className="form-control"
+              value={this.state.arrivalDate}
+              onChange={this.changeArrivalDateHandler}
+            />
+          </div>
+          <br />
+          <h5><Trans>Arriving time.1</Trans></h5>
+          <div className="form-group">
+            <input
+              placeholder="Arriving time"
+              name="arrivingTime"
+              className="form-control"
+              value={this.state.arrivingTime}
+              onChange={this.changeArrivingTimeHandler}
+            />
+          </div>
+          <br />
+          <h5><Trans>Means of transport (optional).1</Trans></h5>
+          <div className="form-group">
+            <input
+              placeholder="Means of transport (optional)"
+              name="meansTransport"
+              className="form-control"
+              value={this.state.meansTransport}
+              onChange={this.changeMeansTransportHandler}
+            />
+          </div>
+          <br />
+          <Link
+            to="/deliver"
+            className="pannel millieu"
+            onClick={this.saveOrUpdateTrip}
+          >
+            <Trans>Next.1</Trans>
+          </Link>
+          <button
+            type="button"
+            className="btn btn-danger button1"
+            onClick={this.cancel.bind(this)}
+          >
+            <Trans>Cancel.1</Trans>
+          </button>
+          <br />
         </div>
-      </div>
+        <br />
+        </div>
     );
   }
 }

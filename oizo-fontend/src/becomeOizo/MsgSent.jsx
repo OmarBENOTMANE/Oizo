@@ -2,7 +2,7 @@ import React, { Component, Suspense } from "react";
 import { withTranslation } from "react-i18next";
 import { HashLink as Link } from "react-router-hash-link";
 
-class NotFound extends Component {
+class MsgSent extends Component {
   render() {
     const { t } = this.props;
     return (
@@ -15,13 +15,11 @@ class NotFound extends Component {
             <br />
             <br />
             <div className="col-centered">
-              {t("Sorry we have not found a request for the moment.1")}.
-            </div>
-            <div className="col-centered">
-              {t("It will come.1")}. ;)
+              {t("Votre message a bien ete envoye.1")}.
             </div>
             <br />
             <br />
+            icon
             <br />
             <br />
             <br />
@@ -42,7 +40,7 @@ class NotFound extends Component {
     );
   }
 }
-const MyComponent = withTranslation()(NotFound);
+const MyComponent = withTranslation()(MsgSent);
 
 // i18n translations might still be loaded by the http backend
 // use react's Suspense

@@ -10,7 +10,7 @@ class UpdateUser extends Component {
       id: this.props.match.params.id,
       firstName: "",
       lastName: "",
-      emailId: "",
+      email: "",
       phone: "",
       address: "",
       city: "",
@@ -18,6 +18,11 @@ class UpdateUser extends Component {
     };
     this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
     this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
+    this.changeEmailHandler = this.changeEmailHandler.bind(this);
+    this.changePhoneHandler = this.changePhoneHandler.bind(this);
+    this.changeAddressHandler = this.changeAddressHandler.bind(this);
+    this.changeCityHandler = this.changeCityHandler.bind(this);
+    this.changeCountryHandler = this.changeCountryHandler.bind(this);
     this.updateUser = this.updateUser.bind(this);
   }
 
@@ -27,7 +32,7 @@ class UpdateUser extends Component {
       this.setState({
         firstName: user.firstName,
         lastName: user.lastName,
-        emailId: user.emailId,
+        email: user.email,
         phone: user.phone,
         address: user.address,
         city: user.city,
@@ -41,7 +46,7 @@ class UpdateUser extends Component {
     let user = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
-      emailId: this.state.emailId,
+      email: this.state.email,
       phone: this.state.phone,
       address: this.state.address,
       city: this.state.city,
@@ -63,7 +68,7 @@ class UpdateUser extends Component {
   };
 
   changeEmailHandler = (event) => {
-    this.setState({ emailId: event.target.value });
+    this.setState({ email: event.target.value });
   };
 
   changePhoneHandler = (event) => {
@@ -158,9 +163,9 @@ class UpdateUser extends Component {
                     <label> Email Id: </label>
                     <input
                       placeholder="Email Address"
-                      name="emailId"
+                      name="email"
                       className="form-control"
-                      value={this.state.emailId}
+                      value={this.state.email}
                       onChange={this.changeEmailHandler}
                     />
                   </div>

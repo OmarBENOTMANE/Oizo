@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 
 class HeaderComponent extends Component {
   constructor(props) {
@@ -9,18 +9,14 @@ class HeaderComponent extends Component {
   render() {
     return (
       <Navbar bg="light">
-        <Navbar.Brand href="#home">
-          <a
-            href="http://localhost:3000/users"
-            className="navbar navbar-light clrbrand"
-          >
-            
-              <letter style={{ color: "blue" }}>o</letter>
-              <letter style={{ color: "orange" }}>i</letter>
-              <letter style={{ color: "green" }}>z</letter>
-              <letter style={{ color: "red" }}>o</letter>
-            
-          </a>
+        <Navbar.Brand href="http://localhost:3000/">
+          <Nav
+            className="navbar navbar-light clrbrand">
+              <span style={{ color: "#00BFFF" }}>o</span>
+              <span style={{ color: "orange" }}>i</span>
+              <span style={{ color: "#03C03C" }}>z</span>
+              <span style={{ color: "red" }}>o</span>
+          </Nav>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">

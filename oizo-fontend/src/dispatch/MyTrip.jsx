@@ -1,59 +1,71 @@
-import React, { Component, Suspense } from "react";
-import { withTranslation } from "react-i18next";
+import React, { Component } from "react";
+import { Trans } from "react-i18next";
+import { HashLink as Link } from "react-router-hash-link";
+import TripService from "../services/TripService";
+import "./../trip/ListTrip";
 
 class MyTrip extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      trips: [],
+    };
+  }
+  componentDidMount() {
+    TripService.getTrips().then((res) => {
+      this.setState({ trips: res.data });
+    });
+  }
+  viewTrip(id) {
+    this.props.history.push(`/view-trip/${id}`);
+  }
   render() {
-    const { t } = this.props;
     return (
-      <div>
+      <div className="container">
         <br />
-        <div className="container">
-          <div className="row">
-            <div className="card col-md-6 offset-md-3 offset-md-3">
-              <h2>{t("My journeys.1")}</h2>
-              <br />
-              <span>{t("Waiting for your reply.1")}</span>
-              <div className="cadre-rose">
-              <div>Paris</div>
-              <div>|</div>
-              <div>
-                Casa <span className="posi30">20/01/2021</span>
-              </div></div>
-              <br />
-              <div className="cadre-rose">
-              <div>Fes</div>
-              <div>|</div>
-              <div>
-                Lyon <span className="posi30">20/01/2021</span>
-              </div></div>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <button type="button" className="button1">
-                {t("New journey.1")}
-              </button>
-              <br />
-              <br />
-            </div>
+        <div className="card col-md-6 offset-md-3">
+          <h2>
+            <Trans>My journeys.1</Trans>
+          </h2>
+          <br />
+          <div>
+            <Trans>Waiting for your reply.1</Trans>
           </div>
+          <div>
+            {this.state.trips.map((trip) => (
+              <ul
+                key={trip.id}
+                type="submit"
+                className="pannel"
+                onClick={() => this.viewTrip(trip.id)}
+              >
+                <div>{trip.departure}</div>
+                <div>|</div>
+                <div>
+                  {trip.arrival}
+                  <span className="posi30">{trip.departureDate}</span>
+                </div>
+                <br />
+              </ul>
+            ))}
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <Link type="button" className="button1" to="/add-trip/:id">
+            <Trans>New journey.1</Trans>
+          </Link>
+          <br />
+          <br />
         </div>
         <br />
       </div>
     );
   }
 }
-const MyComponent = withTranslation()(MyTrip);
 
-// i18n translations might still be loaded by the http backend
-// use react's Suspense
-export default function App() {
-  return (
-    <Suspense fallback="loading">
-      <MyComponent />
-    </Suspense>
-  );
-}
+export default MyTrip;

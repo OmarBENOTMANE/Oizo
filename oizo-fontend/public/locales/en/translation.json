@@ -35,10 +35,10 @@
   "You": {
     "1": "You"
   },
-  "FirstName": {
+  "First Name": {
     "1": "First Name"
   },
-  "LastName": {
+  "Last Name": {
     "1": "Last Name"
   },
   "Your Phone": {
@@ -116,6 +116,9 @@
   "Means of transport (optional)": {
     "1": "Means of transport (optional)"
   },
+  "Means of transport": {
+    "1": "Means of transport"
+  },
   " and you can transport": {
     "1": " and you can transport"
   },
@@ -175,6 +178,18 @@
   },
   "New route": {
     "1": "New route"
+  },
+  "User Details": {
+    "1": "User Details"
+  },
+  "Add User": {
+    "1": "Add User"
+  },
+  "List of trips": {
+    "1": "List of trips"
+  },
+  "View trip Details": {
+    "1": "View trip Details"
   }
-
+  
 }

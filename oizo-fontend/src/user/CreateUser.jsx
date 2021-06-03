@@ -10,7 +10,7 @@ class CreateUser extends Component {
       id: this.props.match.params.id,
       firstName: "",
       lastName: "",
-      emailId: "",
+      email: "",
       phone: "",
       address: "",
       city: "",
@@ -18,6 +18,11 @@ class CreateUser extends Component {
     };
     this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
     this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
+    this.changeEmailHandler = this.changeEmailHandler.bind(this);
+    this.changePhoneHandler = this.changePhoneHandler.bind(this);
+    this.changeAddressHandler = this.changeAddressHandler.bind(this);
+    this.changeCityHandler = this.changeCityHandler.bind(this);
+    this.changeCountryHandler = this.changeCountryHandler.bind(this);
     this.saveOrUpdateUser = this.saveOrUpdateUser.bind(this);
   }
   // step 3
@@ -30,7 +35,7 @@ class CreateUser extends Component {
         this.setState({
           firstName: user.firstName,
           lastName: user.lastName,
-          emailId: user.emailId,
+          email: user.email,
           phone: user.phone,
           address: user.address,
           city: user.city,
@@ -45,7 +50,7 @@ class CreateUser extends Component {
     let user = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
-      emailId: this.state.emailId,
+      email: this.state.email,
       phone: this.state.phone,
       address: this.state.address,
       city: this.state.city,
@@ -67,15 +72,12 @@ class CreateUser extends Component {
   changeFirstNameHandler = (event) => {
     this.setState({ firstName: event.target.value });
   };
-
   changeLastNameHandler = (event) => {
     this.setState({ lastName: event.target.value });
   };
-
   changeEmailHandler = (event) => {
-    this.setState({ emailId: event.target.value });
+    this.setState({ email: event.target.value });
   };
-
   changePhoneHandler = (event) => {
     this.setState({ phone: event.target.value });
   };
@@ -95,7 +97,11 @@ class CreateUser extends Component {
 
   getTitle() {
     if (this.state.id === "_add") {
-      return <h3 className="text-center">Add User</h3>;
+      return (
+        <h1 className="text-center">
+          <Trans>Add User.1</Trans>
+        </h1>
+      );
     } else {
       return (
         <h3 className="text-center">
@@ -106,122 +112,109 @@ class CreateUser extends Component {
   }
   render() {
     return (
-      <div>
-        <br></br>
-        <div className="container">
-          <div className="row">
-            <div className="card col-md-6 offset-md-3 offset-md-3">
-              {this.getTitle()}
-              <div className="card-body">
-                <form>
-                  <h2>
-                    <Trans>You.1</Trans>{" "}
-                  </h2>
-                  <br />
-                  <div className="form-group">
-                    <label>
-                      {" "}
-                      <Trans>FirstName.1</Trans> :{" "}
-                    </label>
-                    <input
-                      placeholder="First Name"
-                      name="firstName"
-                      className="form-control"
-                      value={this.state.firstName}
-                      onChange={this.changeFirstNameHandler}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label>
-                      {" "}
-                      <Trans>LastName.1</Trans>:{" "}
-                    </label>
-                    <input
-                      placeholder="Last Name"
-                      name="lastName"
-                      className="form-control"
-                      value={this.state.lastName}
-                      onChange={this.changeLastNameHandler}
-                    />
-                  </div>
-                  <h2>
-                    <Trans>YourPhone.1</Trans>
-                  </h2>
-                  <br />
-                  <div className="form-group">
-                    <input
-                      placeholder="Phone"
-                      name="phone"
-                      className="form-control"
-                      value={this.state.phone}
-                      onChange={this.changePhoneHandler}
-                    />
-                  </div>
-                  <br />
-                  <h2>
-                    <Trans>YourAddress.1</Trans>
-                  </h2>
-                  <div className="form-group">
-                    <input
-                      placeholder="Number or Street name"
-                      name="address"
-                      className="form-control"
-                      value={this.state.address}
-                      onChange={this.changeAddressHandler}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      placeholder="Postal code or city name"
-                      name="city"
-                      className="form-control"
-                      value={this.state.city}
-                      onChange={this.changeCityHandler}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      placeholder="Country"
-                      name="country"
-                      className="form-control"
-                      value={this.state.country}
-                      onChange={this.changeCountryHandler}
-                    />
-                  </div>
-                  <br />
-                  <div className="form-group">
-                    <label>
-                      {" "}
-                      <Trans>YourEmail.1</Trans>:{" "}
-                    </label>
-                    <input
-                      placeholder="Email Address"
-                      name="emailId"
-                      className="form-control"
-                      value={this.state.emailId}
-                      onChange={this.changeEmailHandler}
-                    />
-                  </div>
-
-                  <button
-                    className="btn btn-success"
-                    onClick={this.saveOrUpdateUser}
-                  >
-                    <Trans>Save.1</Trans>
-                  </button>
-                  <button
-                    className="btn btn-danger"
-                    onClick={this.cancel.bind(this)}
-                    style={{ marginLeft: "10px" }}
-                  >
-                    <Trans>Cancel.1</Trans>
-                  </button>
-                </form>
+      <div className="container">
+        <br />
+        <div className="card col-md-6 offset-md-3"
+        style={{ backgroundColor: "pink"}}>
+          <br />
+          {this.getTitle()}
+          <div className="card-body">
+            <form>
+              <h2><Trans>You.1</Trans></h2>
+              <br />
+              <div className="form-group">
+                <label>
+                  <Trans>First Name.1</Trans> :
+                </label>
+                <input
+                  placeholder="First Name"
+                  name="firstName"
+                  className="form-control"
+                  value={this.state.firstName}
+                  onChange={this.changeFirstNameHandler}
+                />
               </div>
-            </div>
+              <div className="form-group">
+                <label>
+                  <Trans>Last Name.1</Trans>:
+                </label>
+                <input
+                  placeholder="Last Name"
+                  name="lastName"
+                  className="form-control"
+                  value={this.state.lastName}
+                  onChange={this.changeLastNameHandler}
+                />
+              </div>
+              <h2><Trans>Your Phone.1</Trans></h2>
+              <br />
+              <div className="form-group">
+                <input
+                  placeholder="Phone"
+                  name="phone"
+                  className="form-control"
+                  value={this.state.phone}
+                  onChange={this.changePhoneHandler}
+                />
+              </div>
+              <br />
+              <h2><Trans>Your Address.1</Trans></h2>
+              <div className="form-group">
+                <input
+                  placeholder="Number or Street name"
+                  name="address"
+                  className="form-control"
+                  value={this.state.address}
+                  onChange={this.changeAddressHandler}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  placeholder="Postal code or city name"
+                  name="city"
+                  className="form-control"
+                  value={this.state.city}
+                  onChange={this.changeCityHandler}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  placeholder="Country"
+                  name="country"
+                  className="form-control"
+                  value={this.state.country}
+                  onChange={this.changeCountryHandler}
+                />
+              </div>
+              <br />
+              <div className="form-group">
+                <label>
+                  <Trans>Your Email.1</Trans>:
+                </label>
+                <input
+                  placeholder="Email Address"
+                  name="email"
+                  className="form-control"
+                  value={this.state.email}
+                  onChange={this.changeEmailHandler}
+                />
+              </div>
+              <button
+                className="btn btn-success"
+                onClick={this.saveOrUpdateUser}
+              >
+                <Trans>Save.1</Trans>
+              </button>
+              <button
+                className="btn btn-danger"
+                onClick={this.cancel.bind(this)}
+                style={{ marginLeft: "10px" }}
+              >
+                <Trans>Cancel.1</Trans>
+              </button>
+            </form>
           </div>
         </div>
-        <br />
         <br />
       </div>
     );

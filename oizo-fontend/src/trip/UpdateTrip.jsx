@@ -91,7 +91,9 @@ class UpdateTrip extends Component {
         <div className="container">
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
-              <h3 className="text-center"><Trans>UpdateTrip.1</Trans></h3>
+              <h3 className="text-center">
+                <Trans>UpdateTrip.1</Trans>
+              </h3>
               <div className="card-body">
                 <form>
                   <div className="form-group">
@@ -164,9 +166,9 @@ class UpdateTrip extends Component {
                       onChange={this.changeMeansTransportHandler}
                     />
                   </div>
-                
+
                   <button className="btn btn-success" onClick={this.updateTrip}>
-                   <trans>Save.1</trans>
+                    <trans>Save.1</trans>
                   </button>
                   <button
                     className="btn btn-danger"

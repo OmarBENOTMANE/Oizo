@@ -14,11 +14,11 @@ class NotFound extends Component {
             <br />
             <br />
             <br />
-            <div className="col-centered">
-              {t("Sorry we have not found a request for the moment.1")}.
+            <div>
+              avatar
             </div>
             <div className="col-centered">
-              {t("It will come.1")}. ;)
+              bonjour, Je serai ravi d'etre votre oizo :) Je reste a votre disposition pour repondre a vos questions. A bientot, Abdou.1
             </div>
             <br />
             <br />
@@ -30,8 +30,8 @@ class NotFound extends Component {
             <br />
             <br />
             <br />
-            <Link className="button1" to="/add-trip/:id">
-              {t("New route.1")}
+            <Link className="pannel millieu" type="submit">
+              {t("Envoye.1")}
             </Link>
             <br />
             <br />

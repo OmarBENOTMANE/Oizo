@@ -9,18 +9,18 @@ export class MyTrip extends Component {
       <div>
         <br />
         <div className="container">
-          <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
+            <br />
               <h2>{t("Congratulations Abdou.1")}</h2>
               <br />
-              <span>{t("Your account has been created.1")}{" "}!</span>
+              <span>{t("Your account has been created.1")} !</span>
               <br />
               <br />
               <br />
               <br />
-              <h3>{t("Your best photo or not.1")}{" "};)</h3>
+              <h3>{t("Your best photo or not.1")} ;)</h3>
               <br />
-              <div className="container">
+              <div>
                 <img src={mainLogo} alt="addimage" width="110" height="90" />
               </div>
               <br />
@@ -34,7 +34,6 @@ export class MyTrip extends Component {
               <br />
             </div>
           </div>
-        </div>
         <br />
       </div>
     );

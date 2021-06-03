@@ -19,59 +19,56 @@ class ViewTrip extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="container">
         <br />
-        <div className="card col-md-6 offset-md-3">
+        <div
+          className="card col-md-6 offset-md-3"
+          style={{backgroundColor: "pink"}} >
           <br />
-          <h3 className="text-center"> View trip Details</h3>
+          <h3 className="text-center">
+          <Trans>View trip Details.1</Trans></h3>
           <div className="card-body">
-            <div className="row">
+            <div>
               <label>
-                {" "}
-                <Trans>departure.1</Trans>:{" "}
-              </label>
-              <div> -{this.state.trip.departure}</div>
+                <Trans>Departure.1</Trans>:
+              </label>{" "}
+              {this.state.trip.departure}
             </div>
-            <div className="row">
+            <div>
               <label>
-                {" "}
-                <Trans>arrival.1</Trans>:{" "}
-              </label>
-              <div> -{this.state.trip.arrival} </div>
+                <Trans>Arrival.1</Trans>:
+              </label>{" "}
+              {this.state.trip.arrival}
             </div>
-            <div className="row">
+            <div>
               <label>
-                {" "}
-                <Trans>departureDate.1</Trans>:{" "}
-              </label>
-              <div> -{this.state.trip.departureDate}</div>
+                <Trans>Date of departure.1</Trans>:
+              </label>{" "}
+              {this.state.trip.departureDate}
             </div>
-            <div className="row">
+            <div>
               <label>
-                {" "}
-                <Trans>departureTime.1</Trans>:{" "}
-              </label>
-              <div> -{this.state.trip.departureTime}</div>
+                <Trans>Departure time.1</Trans>:
+              </label>{" "}
+              {this.state.trip.departureTime}
             </div>
-            <div className="row">
+            <div>
               <label>
-                <Trans>arrivalDate.1</Trans>:{" "}
-              </label>
-              <div>- {this.state.trip.arrivalDate}</div>
+                <Trans>Arrival date.1</Trans>:{" "}
+              </label>{" "}
+              {this.state.trip.arrivalDate}
             </div>
-            <div className="row">
+            <div>
               <label>
-                {" "}
-                <Trans>arrivingTime.1</Trans>:{" "}
-              </label>
-              <div> -{this.state.trip.arrivingTime}</div>
+                <Trans>Arriving time.1</Trans>:
+              </label>{" "}
+              {this.state.trip.arrivingTime}
             </div>
-            <div className="row">
+            <div>
               <label>
-                {" "}
-                <Trans>meansTransport.1</Trans>:{" "}
-              </label>
-              <div> -{this.state.trip.meansTransport}</div>
+                <Trans>Means of transport.1</Trans>:
+              </label>{" "}
+              {this.state.trip.meansTransport}
             </div>
           </div>
         </div>

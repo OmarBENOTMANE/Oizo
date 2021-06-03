@@ -4,10 +4,10 @@ import { Trans } from "react-i18next";
 
 class ListUser extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      users: []
-    }
+      users: [],
+    };
     this.addUser = this.addUser.bind(this);
     this.editUser = this.editUser.bind(this);
     this.deleteUser = this.deleteUser.bind(this);
@@ -40,99 +40,87 @@ class ListUser extends Component {
   render() {
     return (
       <div>
+        <br />
         <h2 className="text-center">
           <Trans>UsersList.1</Trans>
         </h2>
-        <div className="row">
-          <br />
-        </div>
-        <div className="card">
+        <br />
+        <div
+          className="card"
+          style={{
+            backgroundColor: "pink",
+          }}>
           <div className="card-body">
-            <div className="row">
-              <table className="table ">
-                <thead className="thead-dark">
-                  <tr>
-                    <th>
-                      {" "}
-                      <Trans>FirstName.1</Trans>
-                    </th>
-                    <th>
-                      <Trans>LastName.1</Trans>{" "}
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>Email.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>Phone.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>Address.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>City.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      <Trans>Country.1</Trans>
-                    </th>
-                    <th>
-                      {" "}
-                      Actions
+            <table className="table table-dark">
+              <thead>
+                <tr>
+                  <th>
+                    <Trans>First Name.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Last Name.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Email.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Phone.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Address.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>City.1</Trans>
+                  </th>
+                  <th>
+                    <Trans>Country.1</Trans>
+                  </th>
+                  <th>Actions</th>
+                  <th>
+                    <button
+                      className="btn btn-primary btn-sm"
+                      onClick={this.addUser}
+                    > +
+                    </button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.users.map((user) => (
+                  <tr key={user.id}>
+                    <td> {user.firstName} </td>
+                    <td> {user.lastName}</td>
+                    <td> {user.email}</td>
+                    <td> {user.phone}</td>
+                    <td> {user.address}</td>
+                    <td> {user.city}</td>
+                    <td> {user.country}</td>
+                    <td>
                       <button
-                        className="btn btn-primary"
-                        onClick={this.addUser}
+                        onClick={() => this.editUser(user.id)}
+                        className="btn btn-outline-warning btn-sm"
                       >
-                        {" "}
-                        +
+                        <Trans>Update.1</Trans>
                       </button>
-                    </th>
+                      <button
+                        onClick={() => this.deleteUser(user.id)}
+                        className="btn btn-outline-danger btn-sm"
+                      >
+                        <Trans>Delete.1</Trans>
+                      </button>
+                      <button
+                        onClick={() => this.viewUser(user.id)}
+                        className="btn btn-outline-info btn-sm"
+                      >
+                        <Trans>View.1</Trans>
+                      </button>
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
-                  {this.state.users.map((user) => (
-                    <tr key={user.id}>
-                      <td> {user.firstName} </td>
-                      <td> {user.lastName}</td>
-                      <td> {user.emailId}</td>
-                      <td> {user.phone}</td>
-                      <td> {user.address}</td>
-                      <td> {user.city}</td>
-                      <td> {user.country}</td>
-                      <td>
-                        <button
-                          onClick={() => this.editUser(user.id)}
-                          className="btn btn-info"
-                        >
-                          <Trans>Update.1</Trans>
-                        </button>
-                        <button
-                          style={{ marginLeft: "10px" }}
-                          onClick={() => this.deleteUser(user.id)}
-                          className="btn btn-danger"
-                        >
-                          <Trans>Delete.1</Trans>
-                        </button>
-                        <button
-                          style={{ marginLeft: "10px" }}
-                          onClick={() => this.viewUser(user.id)}
-                          className="btn btn-info"
-                        >
-                          <Trans>View.1</Trans>
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
-        <br />
-        <br />
       </div>
     );
   }

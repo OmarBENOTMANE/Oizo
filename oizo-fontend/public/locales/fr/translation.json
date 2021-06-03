@@ -36,7 +36,7 @@
     "1": "Toi"
   },
   "First Name": {
-    "1": "Prenom"
+    "1": "Prénom"
   },
   "Last Name": {
     "1": "Nom"
@@ -119,6 +119,9 @@
   "Means of transport (optional)": {
     "1": "Moyen de transport (facultatif)"
   },
+  "Means of transport": {
+    "1": "Moyen de transport"
+  },
   " and you can transport": {
     "1": "et tu peux transporter"
   },
@@ -178,6 +181,19 @@
   },
   "New route": {
     "1": "Nouveau trajet"
+  },
+  "User Details": {
+    "1": "Détails de l'utilisateur"
+  },
+  "Add User": {
+    "1": "Créer un utilisateur"
+  },
+  "List of trips": {
+    "1": "Liste des voyages"
+  },
+  "View trip Details": {
+    "1": "Details du voyage"
   }
+  
 
 }
