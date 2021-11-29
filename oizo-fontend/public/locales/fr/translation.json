@@ -193,7 +193,18 @@
   },
   "View trip Details": {
     "1": "Details du voyage"
+  },
+  "Hello, I will be delighted to be your oizo": {
+    "1": "Bonjour, je serai ravie d'être votre oizo"
+  },
+  "I remain at your disposal to answer your questions. See you soon, Abdou": {
+    "1": "Je reste à votre disposition pour répondre à vos questions. A bientôt Abdou"
+  },
+  "Send": {
+    "1": "Envoyer"
   }
+  
+  
   
 
 }

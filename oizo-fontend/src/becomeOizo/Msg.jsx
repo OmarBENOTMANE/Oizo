@@ -1,10 +1,9 @@
-import React, { Component, Suspense } from "react";
-import { withTranslation } from "react-i18next";
+import React, { Component } from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import { Trans } from "react-i18next";
 
-class NotFound extends Component {
+class Msg extends Component {
   render() {
-    const { t } = this.props;
     return (
       <div>
         <br />
@@ -18,7 +17,8 @@ class NotFound extends Component {
               avatar
             </div>
             <div className="col-centered">
-              bonjour, Je serai ravi d'etre votre oizo :) Je reste a votre disposition pour repondre a vos questions. A bientot, Abdou.1
+              <Trans>Hello, I will be delighted to be your oizo.1</Trans>:)
+              <Trans>I remain at your disposal to answer your questions. See you soon, Abdou.1</Trans>
             </div>
             <br />
             <br />
@@ -31,7 +31,7 @@ class NotFound extends Component {
             <br />
             <br />
             <Link className="pannel millieu" type="submit">
-              {t("Envoye.1")}
+            <Trans>Send.1</Trans>
             </Link>
             <br />
             <br />
@@ -42,14 +42,5 @@ class NotFound extends Component {
     );
   }
 }
-const MyComponent = withTranslation()(NotFound);
 
-// i18n translations might still be loaded by the http backend
-// use react's Suspense
-export default function App() {
-  return (
-    <Suspense fallback="loading">
-      <MyComponent />
-    </Suspense>
-  );
-}
+export default Msg;

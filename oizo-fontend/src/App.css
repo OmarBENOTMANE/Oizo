@@ -60,3 +60,5 @@
   display: flex;
   justify-content: center;
 }
+.pad
+{padding: .5625rem 1.25rem;}
