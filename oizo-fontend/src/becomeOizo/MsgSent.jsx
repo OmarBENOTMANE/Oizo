@@ -15,7 +15,7 @@ class MsgSent extends Component {
             <br />
             <br />
             <div className="col-centered">
-              {t("Votre message a bien ete envoye.1")}.
+              {t("Your message has been sent.1")}.
             </div>
             <br />
             <br />

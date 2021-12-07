@@ -10,9 +10,7 @@ class Deliver extends Component {
         <br />
         <div className="container">
           <div
-            className="card col-md-6 offset-md-3"
-            style={{ backgroundColor: "pink" }}
-          >
+            className="card col-md-6 offset-md-3">
             <br />
             <h1>... {t(" and you can transport.1")}</h1>
             <br />

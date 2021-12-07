@@ -8,10 +8,12 @@ import FooterComponent from "./components/FooterComponent";
 import ListUser from "./user/ListUser";
 import CreateUser from "./user/CreateUser";
 import ViewUser from "./user/ViewUser";
+
 import Foto from "./user/Foto";
+import Info from "./page/Info";
 
 import Oizo from "./begin/Oizo";
-import Authentication from "./begin/Authentication";
+import Authentification from "./begin/Authentification";
 import EntryCode from "./begin/EntryCode";
 
 import Deliver from "./becomeOizo/Deliver";
@@ -40,10 +42,12 @@ function App() {
             <Route exact path="/add-user/:id" component={CreateUser} />
             <Route exact path="/view-user/:id" component={ViewUser} />
             {/* <Route path = "/update-user/:id" component = {UpdateUser} /> */}
+            {/*  */}
             <Route exact path="/foto" component={Foto} />
+            <Route exact path="/info" component={Info} />
             {/*  */}
             <Route exact path="/oizo" component={Oizo} />
-            <Route exact path="/authentication" component={Authentication} />
+            <Route exact path="/authentification" component={Authentification} />
             <Route exact path="/entryCode" component={EntryCode} />
             {/* */}
             <Route exact path="/home" component={Home} />

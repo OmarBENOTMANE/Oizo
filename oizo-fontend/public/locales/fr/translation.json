@@ -202,9 +202,12 @@
   },
   "Send": {
     "1": "Envoyer"
+  },
+  "Your message has been sent": {
+    "1": "Votre message a bien été envoyé"
   }
   
   
   
-
+  
 }

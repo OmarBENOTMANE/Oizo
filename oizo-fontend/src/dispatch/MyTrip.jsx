@@ -32,6 +32,18 @@ class MyTrip extends Component {
             <Trans>Waiting for your reply.1</Trans>
           </div>
           <div>
+            ...
+          </div>
+          <div>
+            <Trans>en cours.1</Trans>
+          </div>
+          <div>
+            ...
+          </div>
+          <div>
+            <Trans>termine.1</Trans>
+          </div>
+          <div>
             {this.state.trips.map((trip) => (
               <ul
                 key={trip.id}

@@ -199,6 +199,9 @@
   },
   "Send": {
     "1": "Send"
+  },
+  "Your message has been sent": {
+    "1": "Your message has been sent"
   }
   
 }
