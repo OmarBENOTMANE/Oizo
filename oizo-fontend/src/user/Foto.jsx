@@ -1,6 +1,7 @@
 import React, { Component, Suspense } from "react";
 import { withTranslation } from "react-i18next";
 import mainLogo from "../addLogo.png";
+import { Link } from "react-router-dom";
 
 export class MyTrip extends Component {
   render() {
@@ -9,31 +10,31 @@ export class MyTrip extends Component {
       <div>
         <br />
         <div className="container">
-            <div className="card col-md-6 offset-md-3 offset-md-3">
+          <div className="card col-md-6 offset-md-3 offset-md-3">
             <br />
-              <h2>{t("Congratulations Abdou.1")}</h2>
-              <br />
-              <span>{t("Your account has been created.1")} !</span>
-              <br />
-              <br />
-              <br />
-              <br />
-              <h3>{t("Your best photo or not.1")} ;)</h3>
-              <br />
-              <div>
-                <img src={mainLogo} alt="addimage" width="110" height="90" />
-              </div>
-              <br />
-              <br />
-              <br />
-              <br />
-              <button type="button" className="button1">
-                {t("Complete.1")}
-              </button>
-              <br />
-              <br />
+            <h2>{t("Congratulations Abdou.1")}</h2>
+            <br />
+            <span>{t("Your account has been created.1")} !</span>
+            <br />
+            <br />
+            <br />
+            <br />
+            <h3>{t("Your best photo or not.1")} ;)</h3>
+            <br />
+            <div>
+              <img src={mainLogo} alt="addimage" width="110" height="90" />
             </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <Link type="button" className="button1 pannel" to="/home">
+              {t("Complete.1")}
+            </Link>
+            <br />
+            <br />
           </div>
+        </div>
         <br />
       </div>
     );

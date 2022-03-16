@@ -35,11 +35,7 @@ class FooterComponent extends Component {
       <div>
         <footer
           className="footer"
-          style={{
-            backgroundColor: "pink",
-          }}
-        >
-          footer
+          style={{backgroundColor: "pink"}}>
           <Tra />
         </footer>
       </div>

@@ -12,9 +12,9 @@ import ViewUser from "./user/ViewUser";
 import Foto from "./user/Foto";
 import Info from "./page/Info";
 
-import Oizo from "./begin/Oizo";
-import Authentification from "./begin/Authentification";
-import EntryCode from "./begin/EntryCode";
+import Sign1 from "./auth/Sign1";
+import Sign2 from "./auth/Sign2";
+import Sign4 from "./auth/Sign4";
 
 import Deliver from "./becomeOizo/Deliver";
 import PathCreated from "./becomeOizo/PathCreated";
@@ -38,17 +38,17 @@ function App() {
         <HeaderComponent />
         <div>
           <Switch>
+            {/*  */}
+            <Route exact path="/sign1" component={Sign1} />
+            <Route exact path="/sign2" component={Sign2} />
+            <Route exact path="/Sign4" component={Sign4} />
+            {/*  */}
             <Route exact path="/users" component={ListUser} />
             <Route exact path="/add-user/:id" component={CreateUser} />
             <Route exact path="/view-user/:id" component={ViewUser} />
-            {/* <Route path = "/update-user/:id" component = {UpdateUser} /> */}
             {/*  */}
             <Route exact path="/foto" component={Foto} />
             <Route exact path="/info" component={Info} />
-            {/*  */}
-            <Route exact path="/oizo" component={Oizo} />
-            <Route exact path="/authentification" component={Authentification} />
-            <Route exact path="/entryCode" component={EntryCode} />
             {/* */}
             <Route exact path="/home" component={Home} />
             <Route exact path="/deliver" component={Deliver} />
@@ -60,7 +60,6 @@ function App() {
             {/* */}
             <Route exact path="/add-trip/:id" component={CreateTrip} />
             <Route exact path="/trips" component={ListTrip} />
-            {/* <Route exact path="/update_trip/:id" component={UpdateTrip} />  */}
             <Route exact path="/view-trip/:id" component={ViewTrip} />
           </Switch>
         </div>

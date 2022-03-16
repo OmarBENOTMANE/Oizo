@@ -5,8 +5,8 @@
   "Particular": {
     "1": "Particular"
   },
-  "Sign up": {
-    "1": "Sign up"
+  "Sign in": {
+    "1": "Sign in"
   },
   "Email": {
     "1": "Email"
@@ -17,11 +17,11 @@
   "Save": {
     "1": "Save"
   },
-  "Sign up with Facebook": {
-    "1": "Sign up with Facebook"
+  "Sign in with Facebook": {
+    "1": "Sign in with Facebook"
   },
-  "Sign up with Google": {
-    "1": "Sign up with Google"
+  "Sign in with Google": {
+    "1": "Sign in with Google"
   },
   "Enter your code received by sms": {
     "1": "Enter your code received by sms"

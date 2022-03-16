@@ -1,7 +1,8 @@
 import React, { Component, Suspense } from "react";
 import { withTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
-class EntryCode extends Component {
+class Sign4 extends Component {
   render() {
     const { t } = this.props;
     return (
@@ -31,7 +32,7 @@ class EntryCode extends Component {
               <br />
               <br />
               <br />
-              <button className="button1 pannel">{t("Next.1")}</button>
+              <Link type="button" className="button1 pannel" to="/foto">{t("Next.1")}</Link>
               <br />
               <br />
             </div>
@@ -42,7 +43,7 @@ class EntryCode extends Component {
     );
   }
 }
-const MyComponent = withTranslation()(EntryCode);
+const MyComponent = withTranslation()(Sign4);
 // i18n translations might still be loaded by the http backend
 // use react's Suspense
 export default function App() {

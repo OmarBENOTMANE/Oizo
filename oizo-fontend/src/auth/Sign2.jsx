@@ -1,16 +1,15 @@
 import React, { Component, Suspense } from "react";
 import { withTranslation } from "react-i18next";
 
-class Authentication extends Component {
+class Sign2 extends Component {
   render() {
     const { t } = this.props;
     return (
       <div>
         <br />
-        <div className="container">
           <div className="card col-md-6 offset-md-3">
             <br />
-            <h2>{t("Sign up.1")}</h2>
+            <h2>{t("Sign in.1")}</h2>
             <div className="card-body">
               <form>
                 <div className="col-sm-8">
@@ -33,27 +32,26 @@ class Authentication extends Component {
                 </div>
                 <br />
                 <div className="millieu">
-                <button className="btn btn-success">{t("Save.1")}</button></div>
+                <button className="btn btn-success" href="/home">{t("Save.1")}</button></div>
                 <br />
                 <br />
                 <br />
                 <button className="btn btn-primary">
-                  {t("Sign up with Facebook.1")}
+                  {t("Sign in with Facebook.1")}
                 </button>
                 <br />
                 <br />
                 <button className="btn btn-danger">
-                  {t("Sign up with Google.1")}
+                  {t("Sign in with Google.1")}
                 </button>
               </form>
             </div>
           </div>
         </div>
-      </div>
     );
   }
 }
-const MyComponent = withTranslation()(Authentication);
+const MyComponent = withTranslation()(Sign2);
 
 // i18n translations might still be loaded by the http backend
 // use react's Suspense

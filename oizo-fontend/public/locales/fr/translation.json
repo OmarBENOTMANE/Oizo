@@ -5,7 +5,7 @@
   "Particular": {
     "1": "Particulier"
   },
-  "Sign up": {
+  "Sign in": {
     "1": "Se connecter"
   },
   "Email": {
@@ -17,10 +17,10 @@
   "Save": {
     "1": "Sauvegarder"
   },
-  "Sign up with Facebook": {
+  "Sign in with Facebook": {
     "1": "Se connecter avec facebook"
   },
-  "Sign up with Google": {
+  "Sign in with Google": {
     "1": "Se connecter avec Google"
   },
   "Enter your code received by sms": {

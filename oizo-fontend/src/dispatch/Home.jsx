@@ -6,26 +6,17 @@ class Home extends Component {
   render() {
     const { t } = this.props;
     return (
-      <div className="container">
-        <br />
         <div className="card col-md-6 offset-md-3">
           <br />
           <br />
           <br />
           <br />
           <h1 className="col-centered">
-            <letter style={{ color: "#00BFFF" }}>
-              o
-              <letter style={{ color: "orange" }}>
-                i
-                <letter style={{ color: "#03C03C" }}>
-                  z<letter style={{ color: "red" }}>o</letter>
-                </letter>
-              </letter>
-            </letter>
+          <span style={{ color: "#00BFFF" }}>o</span>
+            <span style={{ color: "orange" }}>i</span>
+            <span style={{ color: "#03C03C" }}>z</span>
+            <span style={{ color: "red" }}>o</span>
           </h1>
-          <br />
-          <br />
           <br />
           <br />
           <br />
@@ -45,7 +36,6 @@ class Home extends Component {
           <br />
           <br />
         </div>
-      </div>
     );
   }
 }
