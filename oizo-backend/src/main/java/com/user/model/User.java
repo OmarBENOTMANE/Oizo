@@ -15,14 +15,14 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@Column(name = "first_name")
+	@Column(name = "firstname")
 	private String firstName;
 
-	@Column(name = "last_name")
+	@Column(name = "lastname")
 	private String lastName;
 
-	@Column(name = "email_id")
-	private String emailId;
+	@Column(name = "email")
+	private String email;
 
 	@Column(name = "phone")
 	private int phone;
@@ -40,12 +40,12 @@ public class User {
 
 	}
 
-	public User(String firstName, String lastName, String emailId, int phone, String address, String city,
+	public User(String firstName, String lastName, String email, int phone, String address, String city,
 			String country) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.emailId = emailId;
+		this.email = email;
 		this.phone = phone;
 		this.address = address;
 		this.city = city;
@@ -76,12 +76,12 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public String getEmailId() {
-		return emailId;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public int getPhone() {

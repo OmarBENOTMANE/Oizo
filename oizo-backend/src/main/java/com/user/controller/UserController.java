@@ -56,7 +56,7 @@ public class UserController {
 
 		user.setFirstName(userDetails.getFirstName());
 		user.setLastName(userDetails.getLastName());
-		user.setEmailId(userDetails.getEmailId());
+		user.setEmail(userDetails.getEmail());
 		user.setAddress(userDetails.getAddress());
 		user.setCity(userDetails.getCity());
 		user.setCountry(userDetails.getCountry());
